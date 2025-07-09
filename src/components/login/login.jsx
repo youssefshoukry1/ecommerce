@@ -1,9 +1,10 @@
 import axios from 'axios';
 import { useFormik } from 'formik'
 import React, { useContext, useState } from 'react'
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import UserContext from '../../context/UserContext';
  import * as Yup from 'yup';
+ import {Helmet} from "react-helmet";
 
 export default function Login() {
     let {setLogin} = useContext(UserContext)
@@ -18,7 +19,7 @@ export default function Login() {
         .then((response)=>{console.log('success',response)
             
             if(response.data.message == 'success'){
-                                localStorage.setItem('userToken',response?.data?.token)
+                localStorage.setItem('userToken',response?.data?.token)
                 setLogin(response?.data?.token)
             setLoading(false)          
             navigate('/')
@@ -40,7 +41,6 @@ let validationSchema = Yup.object({
 
     let formik = useFormik({
     initialValues: {
-
         email: "",
         password: "",
     },
@@ -57,7 +57,16 @@ let validationSchema = Yup.object({
 
     
     <>
-    <div className="bg-gray-100 flex h-screen items-center justify-center px-4 sm:px-6 lg:px-8">
+
+      <Helmet>
+                
+                <title>Login</title>
+              
+            </Helmet>
+
+
+    <div className=" flex h-screen items-center justify-center px-4 sm:px-6 lg:px-8">
+        
     <div className="w-full max-w-md space-y-8">
         <div className="bg-white shadow-md rounded-md p-6">
             
@@ -107,13 +116,14 @@ let validationSchema = Yup.object({
                 </div>
 
 
-
-
                 <div>
-                    <button type="submit"  disable = {formik}
-                        className="flex w-full justify-center rounded-md border border-transparent bg-sky-400 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-opacity-75 focus:outline-none focus:ring-2 focus:ring-sky-400 focus:ring-offset-2">
-                        {isLoading?<i className='fa fa-spinner fa-spiin mx-3'></i>:null}  Login
-                        </button>
+                                <button className="transition-all duration-700 ease-in-out w-full relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 hover:bg-gradient-to-r hover:from-indigo-500 hover:via-sky-500 hover:to-blue-500 hover:scale-105 hover:shadow-xl hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200 dark:focus:ring-cyan-800">
+      <span className="relative px-5 py-2.5 transition-all duration-700 ease-in rounded-md">
+        <p className='text-xl'>Login</p> 
+      </span>
+      {isLoading ? <i className='fa fa-spinner fa-spin mx-3'></i> : null}  
+    </button>
+    <p><Link to={'/forgot-passord'} className=''>FotgetPassword ?</Link></p>
                 </div>
             </form>
         </div>
