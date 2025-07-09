@@ -8,11 +8,10 @@ import { useNavigate } from 'react-router-dom';
 export default function ResetPasword() {
  let navigate = useNavigate()
 
- let validationSchema = Yup.object({
- 
+let validationSchema = Yup.object({
      email:Yup.string().required('email is required').email('enter availed email'),
-     password:Yup.string().required('passowrd is required').matches(/^[A-Z][a-z0-9]{5,7}$/,'enter availed passowrd'),
- });
+     newPassword:Yup.string().required('password is required').matches(/^[A-Z][a-z0-9]{5,7}$/,'enter availed password'),
+});
 function resetPassword(values){
     axios.put(`https://ecommerce.routemisr.com/api/v1/auth/resetPassword`, values)
       .then(({ data }) => {
@@ -34,8 +33,6 @@ function resetPassword(values){
 
   return (
 <>
-
-
           <Helmet>
                 
                 <title>ResetPassword</title>
@@ -55,7 +52,7 @@ function resetPassword(values){
         </div>
         <div>
           <label htmlFor="newPassword" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">New Password</label>
-          <input type="newPassword" value={formik.values.password} onBlur={formik.handleBlur} onChange={formik.handleChange}  name="newPassword" id="newPassword" placeholder="••••••••" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
+          <input type="password" value={formik.values.newPassword} onBlur={formik.handleBlur} onChange={formik.handleChange}  name="newPassword" id="newPassword" placeholder="••••••••" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
         </div>
         <div className="flex items-start">
           <div className="flex items-center h-5">
