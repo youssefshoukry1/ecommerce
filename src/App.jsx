@@ -15,17 +15,9 @@ import CartContextProvider from "./context/CartContextProvider";
 import { Toaster } from "react-hot-toast";
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
-<<<<<<< HEAD
 import Footer from "./components/Footer/Footer";
 import CategoryTable from "./components/WomenCategory/CategoryTable";
 import Checkout from "./components/checkout/checkout";
-=======
-import Brands from "./components/Brands/Brands";
-import Footer from "./components/Footer/Footer";
-import CategoryTable from "./components/WomenCategory/CategoryTable";
-import Checkout from "./components/checkout/checkout";
-import Allorders from "./components/allorders/allorders";
->>>>>>> c8c94863642eb5b670cd8db87cb32cf09da96471
 import { Offline } from "react-detect-offline";
 import ForgotPassword from "./components/ForgetPassword/ForgotPassword";
 import ResetPasword from "./components/ResetPasword/ResetPasword";
@@ -43,7 +35,6 @@ let routes = createBrowserRouter([
     children: [
       { index: true, element: <ProtectedRoute> <Products /> </ProtectedRoute>  },
       { path: "login", element: <Login /> },
-      { path: "brands", element: <ProtectedRoute> <Brands /> </ProtectedRoute> },
       { path: "register", element: <Register /> },
       { path: "footer", element: <Footer /> },
       { path: "product-detail/:id/:category", element: <ProtectedRoute> <Productdetail/> </ProtectedRoute> },
@@ -52,10 +43,6 @@ let routes = createBrowserRouter([
       { path: "electronic/:elctronics", element: <ProtectedRoute> <ElectronicsCategory/> </ProtectedRoute> },
       { path: "cart", element: <ProtectedRoute><Carts /></ProtectedRoute>  },
       { path: "checkout/:cartid", element: <ProtectedRoute><Checkout /></ProtectedRoute>  },
-<<<<<<< HEAD
-=======
-      { path: "allorders", element: <ProtectedRoute> <Allorders/> </ProtectedRoute> },
->>>>>>> c8c94863642eb5b670cd8db87cb32cf09da96471
       { path: "forgot-passord", element: <ForgotPassword /> },
       { path: "resetPassword", element: <ResetPasword /> },
       { path: "*", element: <Notfound /> },
