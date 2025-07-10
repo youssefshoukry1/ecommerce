@@ -62,7 +62,6 @@ export default function Productdetail() {
   }
   return (
     <>
-<<<<<<< HEAD
 
 
       <Helmet>
@@ -100,47 +99,6 @@ export default function Productdetail() {
                       </div>
 
           
-=======
-
-
-      <Helmet>
-                
-                <title>ProductDetails</title>
-              
-            </Helmet>
-
-        <div className='row justify-center items-center my-5'>
-      <div className='w-1/5 py-20 mx-5 '>
-            <Slider {...settings}>
-
-        {details?.images.map((src)=>{
-          return <img src={src} className='w-full rounded-3xl ' alt={details?.title} />
-        })}
-    </Slider>
-
-      
-      </div>
-      <div className='w-1/3 flex flex-col justify-around mx-5 bg-gray-700 p-7 rounded-3xl'> 
-        <div>
-          <h1 className='text-xl font-semibold text-sky-600'>{details?.title}</h1>
-          <p className='mt-4 text-white text-lg'>{details?.description}</p>
-        </div>
-        <div>
-            <p className='mt-3 text-white text-lg'>{details?.category?.name}</p>
-                  <div className="flex justify-between my-3 ">
-                    
-            <span className='text-cyan-200 text-2xl flex my-5 '>
-              {details?.price} 
-                      <p className='text-white text-sm mx-2 -my-1.5'>EGP</p>
-            </span>
-            <span className='flex p-2 -my-3' style={{ color: '#0891b2' }}>
-              <p className=' text-xl -my-1.5 mx-2'>{details?.ratingsQuantity}</p>
-              <i className="fas fa-star text-yellow-300 "></i>
-            </span>
-        </div>
-
-          </div>
->>>>>>> c8c94863642eb5b670cd8db87cb32cf09da96471
           <button className='button shake-vertical'
                       onClick={() => {
                         addProductItem(details?.id);

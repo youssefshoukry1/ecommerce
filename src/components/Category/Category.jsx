@@ -51,7 +51,6 @@ console.log(props)
   }
   return (
     <div className="my-5">
-<<<<<<< HEAD
       <div className="row gap-8 my-11 ">
         {product.map((productInfo) => (
           <div className="lg:w-1/6 lg:px-6 w-2/5"  key={productInfo.id}>
@@ -81,37 +80,6 @@ console.log(props)
                           addProductItem(productInfo.id);
                         }}
                         className="button text-sm vibrate-1 blink-1 "
-=======
-      <div className="row gap-2 ">
-        {product.map((productInfo) => (
-          <div className="w-1/6 px-4"  key={productInfo.id}>
-            <div className="bg-gray-700 p-3 rounded-3xl shadow-3xl hover:shadow-2xl hover:shadow-cyan-900 hover:scale-95 transition-all duration-300">
-              <Link to={`/product-detail/${productInfo?.id}/${productInfo?.category?.name}`}>
-                <img className="w-full rounded-3xl " src={productInfo?.imageCover} alt={productInfo?.title} />
-                <span className="block text-xl font.semibold text-sky-600">
-                  {productInfo?.category?.name}
-                </span>
-                <span className="text-lg font-light text-gray-700">
-                  {productInfo?.title.split(' ').slice(0, 3).join(' ')}
-                </span>
-                <div className="flex justify-between my-3 ">
-                  <span className='flex text-2xl text-cyan-200 '>
-                    {productInfo?.price}
-                    <p className='text-white text-sm mx-2 -my-1.5'>EGP</p>
-                  </span>
-                  <span className='flex p-2   text-cyan-600'>
-                    <p className=' text-xl -my-1.5 mx-2'>{productInfo?.ratingsQuantity}</p>
-                    <i className="fas fa-star text-yellow-300 "></i>
-                  </span>
-                </div>
-              </Link>
-                                  <div className="flex justify-center mt-2">
-                      <button
-                        onClick={() => {
-                          addProductItem(productInfo?.id);
-                        }}
-                        className="button vibrate-1 blink-1 "
->>>>>>> c8c94863642eb5b670cd8db87cb32cf09da96471
                       >
                         Add To Cart
                       </button>

@@ -83,11 +83,7 @@ export default function Carts() {
               
             </Helmet>
 
-<<<<<<< HEAD
       <div className='lg:w-8/12 w-5/6 mx-auto my-10 '>
-=======
-      <div className='w-8/12 mx-auto my-10 '>
->>>>>>> c8c94863642eb5b670cd8db87cb32cf09da96471
         {product?.products.length > 0 ? (
           <>
             <div classname="fkex flex-wrap justify-around  rounded-3xl">
@@ -103,11 +99,7 @@ export default function Carts() {
             </div>
 
 
-<<<<<<< HEAD
             <div className=" w relative overflow-x-auto shadow-md sm:rounded-lg my-10 rounded-3xl border-4 border-cyan-900  ">
-=======
-            <div className="relative overflow-x-auto shadow-md sm:rounded-lg my-10 rounded-3xl border-4 border-cyan-900 ">
->>>>>>> c8c94863642eb5b670cd8db87cb32cf09da96471
               <table className="w-full mx-auto text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 rounded-3xl border-4 border-cyan-900 ">
                 <thead className="text-xs text-gray-700 uppercase bg-cyan-900 dark:text-gray-400 rounded-3xl ">
                   <tr>
