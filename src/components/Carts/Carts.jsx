@@ -90,7 +90,7 @@ export default function Carts() {
               <div className=" card m-auto p-5 w-full max-w-sm  border-gray-200 rounded-lg shadow-xl h-48">
                 <div className="px-5 pb-5">
                   <h1 className="  text-focus-in text-center text-4xl text-main text-sky-800">Shoping Cart</h1>
-                  <p className="  text-focus-in text-center text-2xl my-6 flex justify-center  ">Tota Price: <span className="text-white mx-3">{product?.totalCartPrice ?? 0} </span></p><p className="  text-sm text-black flex justify-end -my-16 mx-10 ">EGP</p><p />
+                  <p className="  text-focus-in text-center text-2xl my-6 flex justify-center  ">Tota Price: <span className="text-white mx-3">{product?.totalCartPrice ?? 0} </span></p><p className="  text-sm text-black flex justify-end lg:-my-16 lg:mx-10 -my-16 mx-1 ">EGP</p><p />
                   <div className=" items-center justify-between my-14">
                     <Link to={'/checkout/' + product?._id} className=" blink-1 checkbtn  absolute my-9 text-white rounded-lg text-base px-7 py-3.5 text-center  hover:bg-sky-100 duration-300  ">check out</Link>
                   </div>
