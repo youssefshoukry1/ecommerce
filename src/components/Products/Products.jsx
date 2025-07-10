@@ -124,7 +124,7 @@ export default function Products() {
               return (
                 <div className="lg:w-1/6 lg:px-6 w-2/5  " key={productInfo.id}>
                   <div className="bg-gray-700 lg:w-64 w-36  p-3 rounded-3xl shadow-current hover:shadow-2xl hover:shadow-cyan-900 transition-all hover:scale-95 duration-300">
-                    <Link to={`/product-detail/${productInfo.id}/${productInfo.category.name}`}>
+                    <Link to={`/productdetail/${productInfo.id}/${productInfo.category.name}`}>
                       <img
                         className="w-full rounded-3xl "
                         src={productInfo.imageCover}

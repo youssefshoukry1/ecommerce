@@ -77,7 +77,7 @@ if(isLoading){
       className=" outline-none shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-s-lg hover:bg-gray-200  focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:text-white dark:border-gray-600"
       onClick={() => setShowDropdown((prev) => !prev)}
     >
-      All categories
+      Women's Fashion
       <svg className="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
         <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 4 4 4-4" />
       </svg>
@@ -119,7 +119,7 @@ if(isLoading){
               return (
                 <div className="lg:w-1/6 lg:px-6 w-2/5  " key={productInfo.id}>
                   <div className="bg-gray-700 lg:w-64 w-36  p-3 rounded-3xl shadow-current hover:shadow-2xl hover:shadow-cyan-900 transition-all hover:scale-95 duration-300">
-                    <Link to={`/product-detail/${productInfo.id}/${productInfo.category.name}`}>
+                    <Link to={`/productdetail/${productInfo.id}/${productInfo.category.name}`}>
                       <img
                         className="w-full rounded-3xl "
                         src={productInfo.imageCover}

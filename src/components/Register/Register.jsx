@@ -35,7 +35,7 @@ let validationSchema = Yup.object({
     name:Yup.string().required('name is required').min(3,'min lenght is 3').max(10,'max lenght is 10'),
     email:Yup.string().required('email is required').email('enter availed email'),
     phone:Yup.string().required('phone is required').matches(/^01[1250][0-9]{8}$/),
-    password:Yup.string().required('passowrd is required').matches(/^[A-Z][a-z0-9]{5,7}$/,'enter availed passowrd'),
+    password:Yup.string().required('passowrd is required').matches(/^[A-Z][a-z0-9]{5,7}$/,'min lenth is 6 and max is 8 and first letter should be capital'),
     rePassword:Yup.string().required('confirm password is required').oneOf([Yup.ref('password')]),
 
 });
@@ -63,10 +63,10 @@ let validationSchema = Yup.object({
     
     <>
 
-      <Helmet>
+        <Helmet>
                 
                 <title>Register</title>
-              
+                
             </Helmet>
 
 <div className="flex items-center justify-center px-4 sm:px-6 lg:px-8 sm:h-screen p-12 lg:p-0 ">

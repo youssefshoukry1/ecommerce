@@ -37,7 +37,7 @@ let routes = createBrowserRouter([
       { path: "login", element: <Login /> },
       { path: "register", element: <Register /> },
       { path: "footer", element: <Footer /> },
-      { path: "product-detail/:id/:category", element: <ProtectedRoute> <Productdetail/> </ProtectedRoute> },
+      { path: "productdetail/:id/:category", element: <ProtectedRoute> <Productdetail/> </ProtectedRoute> },
       { path: "category-table/:women", element: <ProtectedRoute> <CategoryTable/> </ProtectedRoute> },
       { path: "mencategory/:men", element: <ProtectedRoute> <MenCategory/> </ProtectedRoute> },
       { path: "electronic/:elctronics", element: <ProtectedRoute> <ElectronicsCategory/> </ProtectedRoute> },
