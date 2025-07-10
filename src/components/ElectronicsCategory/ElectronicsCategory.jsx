@@ -5,7 +5,10 @@ import CartContext from "../../context/CartContext.js";
 import toast from "react-hot-toast";
 import { useQuery } from "@tanstack/react-query";
 import Loader from '../loader/loader.jsx';
+<<<<<<< HEAD
 import {Helmet} from "react-helmet";
+=======
+>>>>>>> c8c94863642eb5b670cd8db87cb32cf09da96471
 
 export default function ElectronicsCategory() {
 
@@ -54,6 +57,7 @@ if(isLoading){
     return (
 
       <>
+<<<<<<< HEAD
         <Helmet>
                 
                 <title>Electronic</title>
@@ -65,6 +69,10 @@ if(isLoading){
 
 
 <form className="w-full max-w-xs sm:max-w-md mx-auto my-12 rounded-3xl px-4">
+=======
+
+      <form className="max-w-md mx-auto my-12 rounded-3xl">
+>>>>>>> c8c94863642eb5b670cd8db87cb32cf09da96471
   <div className="flex relative">
     <label htmlFor="search-dropdown" className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">
       Your Email
@@ -108,21 +116,33 @@ if(isLoading){
 
 
 
+<<<<<<< HEAD
           <div className="row gap-8 my-11 ">
+=======
+
+
+          <div className="row gap-2 my-11 ">
+>>>>>>> c8c94863642eb5b670cd8db87cb32cf09da96471
             {data.filter((item) => {
                 return search.trim() === '' 
     ? true 
     : item.title.toLowerCase().includes(search.toLowerCase());
             }).map((productInfo) => { //هنا عملنا بدلproduct.map عملنا data.map عشان الquery
               return (
+<<<<<<< HEAD
                 <div className="lg:w-1/6 lg:px-6 w-2/5  " key={productInfo.id}>
                   <div className="bg-gray-700 lg:w-64 w-36  p-3 rounded-3xl shadow-current hover:shadow-2xl hover:shadow-cyan-900 transition-all hover:scale-95 duration-300">
+=======
+                <div className="w-1/6 px-6 " key={productInfo.id}>
+                  <div className="bg-gray-700 p-3 rounded-3xl shadow-current hover:shadow-2xl hover:shadow-cyan-900 transition-all hover:scale-95 duration-300">
+>>>>>>> c8c94863642eb5b670cd8db87cb32cf09da96471
                     <Link to={`/product-detail/${productInfo.id}/${productInfo.category.name}`}>
                       <img
                         className="w-full rounded-3xl "
                         src={productInfo.imageCover}
                         alt={productInfo.title}
                       />
+<<<<<<< HEAD
                       <span className="block lg:text-xl font.semibold text-cyan-600 ">
                         {productInfo.category.name}
                       </span>
@@ -138,6 +158,23 @@ if(isLoading){
                         <span className="flex ">
                           <p className="lg:p-2 p-1 lg:-my-3.5 -my-0 text-sm lg:text-lg text-white ">{productInfo.ratingsQuantity}</p>
                           <i className="fas fa-star text-sm text-yellow-300 my-1.5"></i>
+=======
+                      <span className="block text-xl font.semibold text-cyan-600 ">
+                        {productInfo.category.name}
+                      </span>
+                      <span className="text-lg font-light text-white">
+                        {productInfo.title.split(" ").slice(0, 3).join(" ")}
+                      </span>
+                      <div className="flex justify-between my-3 ">
+                        
+                        <span className="flex text-white ">
+                          <p className="p-2 -my-2.5 text-2xl  text-cyan-600">{productInfo.price}</p>
+                          EGP
+                        </span>
+                        <span className="flex ">
+                          <p className="p-2 -my-3.5 text-lg text-white ">{productInfo.ratingsQuantity}</p>
+                          <i className="fas fa-star text-yellow-300"></i>
+>>>>>>> c8c94863642eb5b670cd8db87cb32cf09da96471
                         </span>
                       </div>
                     </Link>
@@ -146,7 +183,11 @@ if(isLoading){
                         onClick={() => {
                           addProductItem(productInfo.id);
                         }}
+<<<<<<< HEAD
                         className="button text-sm vibrate-1 blink-1 "
+=======
+                        className="button vibrate-1 blink-1 "
+>>>>>>> c8c94863642eb5b670cd8db87cb32cf09da96471
                       >
                         Add To Cart
                       </button>
@@ -156,6 +197,7 @@ if(isLoading){
               );
             })}
           </div>
+<<<<<<< HEAD
 
 
 
@@ -164,5 +206,11 @@ if(isLoading){
     );
 
   }
+=======
+    </>
+  )
+  
+}
+>>>>>>> c8c94863642eb5b670cd8db87cb32cf09da96471
 
 }

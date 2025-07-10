@@ -17,7 +17,11 @@ let { cartid } = useParams()
               token:localStorage.getItem('userToken')
             },
             params:{
+<<<<<<< HEAD
               url:'http://localhost:5173/'
+=======
+              url:'https://ecommerce-ibhs.vercel.app/'
+>>>>>>> c8c94863642eb5b670cd8db87cb32cf09da96471
             }
           }
         )

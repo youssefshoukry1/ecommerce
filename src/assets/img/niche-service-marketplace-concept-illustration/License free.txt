@@ -7,7 +7,11 @@ you are bound to the license terms described in the accompanying file
 
 You must attribute the image to its author:
 
+<<<<<<< HEAD
 In order to use a content or a part of it, you must attribute it to stories / Freepik,
+=======
+In order to use a content or a part of it, you must attribute it to vectorpouch / Freepik,
+>>>>>>> c8c94863642eb5b670cd8db87cb32cf09da96471
 so we will be able to continue creating new graphic resources every day.
 
 
@@ -16,13 +20,21 @@ How to attribute it?
 For websites:
 
 Please, copy this code on your website to accredit the author:
+<<<<<<< HEAD
 <a href="http://www.freepik.com">Designed by stories / Freepik</a>
+=======
+<a href="http://www.freepik.com">Designed by vectorpouch / Freepik</a>
+>>>>>>> c8c94863642eb5b670cd8db87cb32cf09da96471
 
 For printing:
 
 Paste this text on the final work so the authorship is known.
 - For example, in the acknowledgements chapter of a book:
+<<<<<<< HEAD
 "Designed by stories / Freepik"
+=======
+"Designed by vectorpouch / Freepik"
+>>>>>>> c8c94863642eb5b670cd8db87cb32cf09da96471
 
 
 You are free to use this image:

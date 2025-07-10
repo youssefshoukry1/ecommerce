@@ -24,6 +24,7 @@ export default function MainSlider() {
     <div className='conteiner my-5'>
 <div className="row">
   <div className='w-1/5'>
+<<<<<<< HEAD
   <img src={img1} className='lg:w-full w-40 md:w-52 h-16 md:h-32 lg:h-48 lg:secondImg object-cover ' />
   <img src={img2} className='lg:w-full w-40 md:w-52 h-16 md:h-32 lg:h-48 lg:secondImg object-cover ' />
   </div>
@@ -32,6 +33,16 @@ export default function MainSlider() {
       <img src={img3} className='lg:w-full h-32 lg:h-96 w-40 md:w-52 md:h-64  lg:mainImg object-cover lg:object-coverr'  />
       <img src={img4} className='lg:w-full h-32 lg:h-96 w-40 md:w-52 md:h-64  lg:mainImg object-cover lg:object-cover' />
     </Slider> 
+=======
+  <img src={img1} className='w-full  h-full secondImg object-cover' />
+  <img src={img2} className='w-full h-full secondImg object-cover' />
+  </div>
+  <div className='w-2/3'>
+    <Slider {...settings}>
+      <img src={img3} className='w-full mainImg object-cover'  />
+      <img src={img4} className='w-full mainImg object-cover' />
+    </Slider>
+>>>>>>> c8c94863642eb5b670cd8db87cb32cf09da96471
   </div>
 </div>
     </div>

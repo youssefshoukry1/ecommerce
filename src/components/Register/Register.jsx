@@ -69,10 +69,15 @@ let validationSchema = Yup.object({
               
             </Helmet>
 
+<<<<<<< HEAD
 <div className="flex items-center justify-center px-4 sm:px-6 lg:px-8 sm:h-screen p-12 lg:p-0 ">
   <div className="w-full max-w-xs sm:max-w-md space-y-8 ">
 
 
+=======
+    <div className=" flex h-screen items-center justify-center px-4 sm:px-6 lg:px-8">
+    <div className="w-full max-w-md space-y-8">
+>>>>>>> c8c94863642eb5b670cd8db87cb32cf09da96471
         <div className="bg-white shadow-md rounded-md p-6">
             
             <h2 className="my-3 text-center text-3xl font-bold tracking-tight text-sky-400">
