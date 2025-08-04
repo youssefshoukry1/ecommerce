@@ -16,7 +16,6 @@ import { Toaster } from "react-hot-toast";
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import Footer from "./components/Footer/Footer";
-import CategoryTable from "./components/WomenCategory/CategoryTable";
 import Checkout from "./components/checkout/checkout";
 import { Offline } from "react-detect-offline";
 import ForgotPassword from "./components/ForgetPassword/ForgotPassword";
@@ -38,12 +37,11 @@ let routes = createBrowserRouter([
       { path: "register", element: <Register /> },
       { path: "footer", element: <Footer /> },
       { path: "productdetail/:id/:category", element: <ProtectedRoute> <Productdetail/> </ProtectedRoute> },
-      { path: "category-table/:women", element: <ProtectedRoute> <CategoryTable/> </ProtectedRoute> },
       { path: "mencategory/:men", element: <ProtectedRoute> <MenCategory/> </ProtectedRoute> },
       { path: "electronic/:elctronics", element: <ProtectedRoute> <ElectronicsCategory/> </ProtectedRoute> },
       { path: "cart", element: <ProtectedRoute><Carts /></ProtectedRoute>  },
       { path: "checkout/:cartid", element: <ProtectedRoute><Checkout /></ProtectedRoute>  },
-      { path: "forgot-passord", element: <ForgotPassword /> },
+      { path: "forgotpassord", element: <ForgotPassword /> },
       { path: "resetPassword", element: <ResetPasword /> },
       { path: "*", element: <Notfound /> },
     ],

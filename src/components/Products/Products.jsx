@@ -9,7 +9,7 @@ import { useQuery } from "@tanstack/react-query";
 import {Helmet} from "react-helmet";
 
 export default function Products() {
- const [showDropdown, setShowDropdown] = useState(false);
+  const [showDropdown, setShowDropdown] = useState(false);
   const [ search, setSearch ] = useState('')
 
   let { addProductToCart } = useContext(CartContext);

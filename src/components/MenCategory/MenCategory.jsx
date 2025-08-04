@@ -158,8 +158,6 @@ if(isLoading){
             })}
           </div>
 
-
-
         </div>
       </>
     );
